@@ -1,0 +1,25 @@
+[project]
+name = "yr-weblate-mcp"
+version = "0.1.0"
+description = "MCP server to fix translations in Weblate: unit search, propagation impact, glossary"
+readme = "README.md"
+authors = [
+    { name = "covn" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "mcp>=1.10",
+]
+
+[project.scripts]
+yr-weblate-mcp = "yr_weblate_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.10.4,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
